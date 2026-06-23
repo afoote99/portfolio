@@ -65,11 +65,11 @@ function ProjectNode({ data }: NodeProps) {
           height: 96,
           fontSize: 13,
           color: "#fff",
-          background: `radial-gradient(circle at 35% 30%, ${d.color}cc, ${d.color}22 70%, transparent)`,
-          border: `2px solid ${d.color}`,
+          background: `radial-gradient(circle at 34% 28%, ${d.color}f2, ${d.color} 72%)`,
+          border: `2px solid #ffffff`,
           boxShadow: d.active
-            ? `0 0 28px ${d.color}aa, inset 0 0 18px ${d.color}55`
-            : `0 0 14px ${d.color}55`,
+            ? `0 12px 26px -6px ${d.color}aa, 0 0 0 1px rgba(35,32,26,0.10)`
+            : `0 6px 16px -8px ${d.color}99, 0 0 0 1px rgba(35,32,26,0.06)`,
           padding: 6,
           lineHeight: 1.15,
         }}
@@ -100,9 +100,11 @@ function CapNode({ data }: NodeProps) {
           padding: "0 14px",
           fontSize: 11,
           color: d.color,
-          background: "#12121c",
+          background: "#ffffff",
           border: `1px dashed ${d.color}99`,
-          boxShadow: d.active ? `0 0 18px ${d.color}66` : "none",
+          boxShadow: d.active
+            ? `0 4px 14px -4px ${d.color}66, 0 0 0 1px rgba(35,32,26,0.05)`
+            : "0 0 0 1px rgba(35,32,26,0.05)",
         }}
       >
         {d.label}
@@ -241,7 +243,7 @@ export default function Constellation() {
         zoomOnPinch={true}
         proOptions={{ hideAttribution: true }}
       >
-        <Background variant={BackgroundVariant.Dots} gap={26} size={1} color="#1e1e2e" />
+        <Background variant={BackgroundVariant.Dots} gap={26} size={1} color="#d8cfbd" />
       </ReactFlow>
     </div>
   );

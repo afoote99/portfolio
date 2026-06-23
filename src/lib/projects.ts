@@ -33,19 +33,19 @@ export interface Project {
 }
 
 export const CATEGORY_COLORS: Record<Category, string> = {
-  AI: "#a855f7",
-  "Full-Stack": "#38bdf8",
-  Mobile: "#34d399",
-  Interactive: "#fb923c",
+  AI: "#5a4ab8",
+  "Full-Stack": "#2f6fb0",
+  Mobile: "#2f9e7a",
+  Interactive: "#c2613f",
 };
 
 export const CAPABILITY_COLORS: Record<Capability, string> = {
-  Claude: "#c084fc",
-  OpenAI: "#34d399",
-  Voice: "#f472b6",
-  Vision: "#60a5fa",
-  Realtime: "#fbbf24",
-  "Graph / Canvas": "#fb923c",
+  Claude: "#7b4fb0",
+  OpenAI: "#2f9e7a",
+  Voice: "#d9577e",
+  Vision: "#2f73c2",
+  Realtime: "#d98a2b",
+  "Graph / Canvas": "#c2613f",
 };
 
 export const projects: Project[] = [
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     caps: ["Claude", "Voice"],
     stack: ["Next.js", "TypeScript", "Prisma", "SQLite → Postgres", "Tailwind", "Vercel"],
     aiStack: ["Claude Opus 4.8", "Structured Outputs", "Deepgram Nova-3"],
-    accent: "#e0a458",
+    accent: "#b5732a",
     problem:
       "Writing is the barrier to journaling, so people quit. And memories don't arrive in order; a story told today might have happened in the 1970s. Most tools can't tell the difference.",
     approach:
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     caps: ["Claude", "Vision"],
     stack: ["Python", "FastAPI", "SQLite", "Anthropic SDK"],
     aiStack: ["Claude (vision)", "Multi-provider (Claude / OpenAI)"],
-    accent: "#5e8bff",
+    accent: "#2f6fb0",
     problem:
       "Process documentation is tedious to write, instantly stale, and never matches how people really work, which makes onboarding and knowledge transfer painful.",
     approach:
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     caps: ["OpenAI", "Voice"],
     stack: ["React", "Vite", "Node / Express", "better-sqlite3", "Recharts", "Tailwind"],
     aiStack: ["GPT-4o-mini", "Deepgram (voice)"],
-    accent: "#e5484d",
+    accent: "#c0392b",
     problem:
       "Raw anonymous feedback is noisy and hard to act on. Leaders drown in comments and can't see the patterns underneath them.",
     approach:
@@ -136,7 +136,7 @@ export const projects: Project[] = [
     caps: ["Claude", "Vision", "Voice", "Realtime"],
     stack: ["Python", "OpenCV", "edge-tts", "Riot Live Client API", "asyncio"],
     aiStack: ["Claude Sonnet 4.6", "OpenCV vision"],
-    accent: "#8b5cf6",
+    accent: "#6e4aa6",
     problem:
       "Improving at a fast real-time game needs in-the-moment strategic guidance, something post-game VOD review can't give you.",
     approach:
@@ -162,7 +162,7 @@ export const projects: Project[] = [
     caps: ["Graph / Canvas"],
     stack: ["React 18", "TypeScript", "Konva", "Zustand", "Vite", "Tailwind"],
     aiStack: [],
-    accent: "#3fa34d",
+    accent: "#2f8f4e",
     problem:
       "Coaches need a fast, visual way to design plays, show exactly how each player moves after the snap, and share them with the team.",
     approach:
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     caps: ["OpenAI", "Voice"],
     stack: ["Python", "Flask", "MySQL", "Docker", "Gunicorn"],
     aiStack: ["OpenAI Whisper", "GPT-4"],
-    accent: "#9146ff",
+    accent: "#7a3fb0",
     problem:
       "Streamers sit on hours of clips but struggle to turn them into a steady stream of short-form content ideas.",
     approach:
@@ -212,7 +212,7 @@ export const projects: Project[] = [
     caps: ["Claude", "Graph / Canvas"],
     stack: ["React 18", "TypeScript", "Vite", "React Flow", "Dagre", "luaparse", "Tailwind"],
     aiStack: ["Claude Haiku"],
-    accent: "#c8a02c",
+    accent: "#9c7a1e",
     problem:
       "MMO quest narratives are scattered across zones and full of spoilers. There's no way to see how storylines connect without spoiling what's ahead.",
     approach:

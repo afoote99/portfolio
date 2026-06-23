@@ -24,7 +24,7 @@ function Chip({ text, color }: { text: string; color?: string }) {
       className="rounded-full px-3 py-1 text-xs font-medium"
       style={{
         color: color ?? "var(--color-muted)",
-        background: color ? `${color}1a` : "rgba(255,255,255,0.04)",
+        background: color ? `${color}1a` : "rgba(35,32,26,0.05)",
         border: `1px solid ${color ? `${color}40` : "var(--color-line)"}`,
       }}
     >
@@ -113,7 +113,7 @@ export default async function ProjectPage({
             <div
               className="flex h-full w-full items-center justify-center"
               style={{
-                background: `radial-gradient(circle at 30% 20%, ${p.accent}33, transparent 60%), linear-gradient(160deg, #12121c, #0b0b12)`,
+                background: `radial-gradient(circle at 30% 20%, ${p.accent}33, transparent 60%), linear-gradient(160deg, #fcfaf5, #efe8dc)`,
               }}
             >
               <span className="text-5xl font-bold tracking-tight" style={{ color: `${p.accent}cc` }}>
@@ -148,7 +148,7 @@ export default async function ProjectPage({
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {p.aiStack.map((a) => (
-                    <Chip key={a} text={a} color="#c084fc" />
+                    <Chip key={a} text={a} color="#7b4fb0" />
                   ))}
                 </div>
               </div>

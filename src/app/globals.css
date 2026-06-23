@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #09090f;
-  --color-panel: #12121c;
-  --color-panel2: #1a1a28;
-  --color-ink: #ecedf4;
-  --color-muted: #9a9ab2;
-  --color-line: #262636;
-  --color-brand: #7c5cff;
-  --color-brand2: #2dd4bf;
+  --color-bg: #f6f2ea;
+  --color-panel: #fcfaf5;
+  --color-panel2: #f0eadf;
+  --color-ink: #23201a;
+  --color-muted: #6f6657;
+  --color-line: #e5ddce;
+  --color-brand: #3b5ba9;
+  --color-brand2: #bf5b3d;
 }
 
 * {
@@ -26,32 +26,35 @@ body {
   overflow-x: hidden;
 }
 
-/* Ambient gradient glow behind the hero */
+/* Soft warm ambient wash behind section tops */
 .aurora {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(50% 40% at 20% 10%, rgba(124, 92, 255, 0.22), transparent 70%),
-    radial-gradient(45% 40% at 85% 5%, rgba(45, 212, 191, 0.16), transparent 70%),
-    radial-gradient(55% 50% at 60% 40%, rgba(168, 85, 247, 0.10), transparent 70%);
+    radial-gradient(50% 42% at 16% 6%, rgba(59, 91, 169, 0.1), transparent 70%),
+    radial-gradient(46% 40% at 86% 3%, rgba(226, 114, 91, 0.1), transparent 70%),
+    radial-gradient(58% 52% at 62% 38%, rgba(47, 158, 143, 0.07), transparent 70%);
 }
 
+/* Clean warm-white cards */
 .glass {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  background: #ffffff;
   border: 1px solid var(--color-line);
-  backdrop-filter: blur(6px);
+  box-shadow:
+    0 1px 2px rgba(35, 32, 26, 0.04),
+    0 10px 28px -18px rgba(35, 32, 26, 0.18);
 }
 
 .gradient-text {
-  background: linear-gradient(120deg, #ffffff 0%, #c4b5fd 45%, #5eead4 100%);
+  background: linear-gradient(120deg, #23201a 0%, #3b5ba9 52%, #bf5b3d 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Tighten React Flow's default look for a dark constellation */
+/* React Flow tweaks */
 .react-flow__attribution {
   display: none !important;
 }
@@ -60,7 +63,7 @@ body {
 }
 
 ::selection {
-  background: rgba(124, 92, 255, 0.35);
+  background: rgba(59, 91, 169, 0.18);
 }
 
 /* Scrollbar */
@@ -72,9 +75,9 @@ body {
   background: var(--color-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2a3c;
+  background: #d9d0bf;
   border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a52;
+  background: #c8bca6;
 }

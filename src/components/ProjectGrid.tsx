@@ -18,7 +18,7 @@ function Chip({ text, color }: { text: string; color?: string }) {
       className="rounded-full px-2.5 py-0.5 text-[11px] font-medium"
       style={{
         color: color ?? "var(--color-muted)",
-        background: color ? `${color}1a` : "rgba(255,255,255,0.04)",
+        background: color ? `${color}1a` : "rgba(35,32,26,0.05)",
         border: `1px solid ${color ? `${color}40` : "var(--color-line)"}`,
       }}
     >
@@ -63,7 +63,7 @@ function Card({ p }: { p: Project }) {
           {p.aiStack.length > 0 && (
             <div className="mt-4 flex flex-wrap gap-1.5">
               {p.aiStack.map((a) => (
-                <Chip key={a} text={a} color="#c084fc" />
+                <Chip key={a} text={a} color="#7b4fb0" />
               ))}
             </div>
           )}
@@ -104,7 +104,7 @@ export default function ProjectGrid() {
               className="rounded-full px-4 py-1.5 text-sm font-medium transition-all"
               style={{
                 color: active ? "#fff" : "var(--color-muted)",
-                background: active ? "var(--color-brand)" : "rgba(255,255,255,0.03)",
+                background: active ? "var(--color-brand)" : "var(--color-panel)",
                 border: `1px solid ${active ? "var(--color-brand)" : "var(--color-line)"}`,
               }}
             >
