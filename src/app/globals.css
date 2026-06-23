@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #09090f;
+  --color-panel: #12121c;
+  --color-panel2: #1a1a28;
+  --color-ink: #ecedf4;
+  --color-muted: #9a9ab2;
+  --color-line: #262636;
+  --color-brand: #7c5cff;
+  --color-brand2: #2dd4bf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Ambient gradient glow behind the hero */
+.aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(50% 40% at 20% 10%, rgba(124, 92, 255, 0.22), transparent 70%),
+    radial-gradient(45% 40% at 85% 5%, rgba(45, 212, 191, 0.16), transparent 70%),
+    radial-gradient(55% 50% at 60% 40%, rgba(168, 85, 247, 0.10), transparent 70%);
+}
+
+.glass {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+  border: 1px solid var(--color-line);
+  backdrop-filter: blur(6px);
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #ffffff 0%, #c4b5fd 45%, #5eead4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Tighten React Flow's default look for a dark constellation */
+.react-flow__attribution {
+  display: none !important;
+}
+.react-flow__edge-path {
+  transition: stroke 0.2s ease, opacity 0.2s ease;
+}
+
+::selection {
+  background: rgba(124, 92, 255, 0.35);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a3c;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a52;
+}
