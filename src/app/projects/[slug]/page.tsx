@@ -14,8 +14,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const p = getProject(slug);
-  if (!p) return { title: "Project — Allan Foote" };
-  return { title: `${p.name} — Allan Foote`, description: p.blurb };
+  if (!p) return { title: "Project | Allan Foote" };
+  return { title: `${p.name} | Allan Foote`, description: p.blurb };
 }
 
 function Chip({ text, color }: { text: string; color?: string }) {

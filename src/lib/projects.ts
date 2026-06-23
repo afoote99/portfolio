@@ -54,20 +54,20 @@ export const projects: Project[] = [
     name: "Kinaroo",
     tagline: "The journal you talk to that becomes your living story.",
     blurb:
-      "A talk-first lifelong journal. You speak — about today or a memory from decades ago — and it becomes a clear, faithful written story placed correctly on the timeline of your life.",
+      "A talk-first lifelong journal. You speak (about today, or a memory from decades ago) and it becomes a clear, faithful written story placed correctly on the timeline of your life.",
     categories: ["AI", "Full-Stack"],
     caps: ["Claude", "Voice"],
     stack: ["Next.js", "TypeScript", "Prisma", "SQLite → Postgres", "Tailwind", "Vercel"],
     aiStack: ["Claude Opus 4.8", "Structured Outputs", "Deepgram Nova-3"],
     accent: "#e0a458",
     problem:
-      "Writing is the barrier to journaling, so people quit. And memories don't arrive in order — a story told today might have happened in the 1970s. Most tools can't tell the difference.",
+      "Writing is the barrier to journaling, so people quit. And memories don't arrive in order; a story told today might have happened in the 1970s. Most tools can't tell the difference.",
     approach:
-      "Talk-first capture: you speak, it transcribes, then an AI splits the telling into discrete stories and infers when each one actually happened — keeping both your verbatim voice and a clean, readable version forever.",
+      "Talk-first capture: you speak, it transcribes, then an AI splits the telling into discrete stories and infers when each one actually happened, keeping both your verbatim voice and a clean, readable version forever.",
     aiArchitecture:
       "Claude Opus 4.8 runs structured-output extraction over each transcript: it segments a session into Story units and independently infers each story's real date (told-date vs. happened-date). When it's unsure, it asks a clarifying question instead of fabricating. Deepgram Nova-3 handles speech-to-text.",
     highlights: [
-      "Told-date vs. happened-date temporal model — stories land where they actually happened",
+      "Told-date vs. happened-date temporal model, so stories land where they actually happened",
       "The AI organizes but never fabricates; it asks a clarifying question when unsure",
       "Keeps both the verbatim transcript and the cleaned story, forever",
       "Built for lifelong accumulation, not a one-year gift book",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
   {
     slug: "process-oracle",
     name: "Process Oracle",
-    tagline: "Records how work actually gets done — and writes the docs for you.",
+    tagline: "Records how work actually gets done, and writes the docs for you.",
     blurb:
       "Records a user's real workflow (screen activity + inputs) and uses Claude's vision model to automatically generate step-by-step process documentation.",
     categories: ["AI"],
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     aiStack: ["Claude (vision)", "Multi-provider (Claude / OpenAI)"],
     accent: "#5e8bff",
     problem:
-      "Process documentation is tedious to write, instantly stale, and never matches how people really work — which makes onboarding and knowledge transfer painful.",
+      "Process documentation is tedious to write, instantly stale, and never matches how people really work, which makes onboarding and knowledge transfer painful.",
     approach:
       "Capture the real process once. The tool records screen activity and inputs, then a vision model interprets the captured sequence and writes ordered, human-readable steps automatically.",
     aiArchitecture:
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     problem:
       "Raw anonymous feedback is noisy and hard to act on. Leaders drown in comments and can't see the patterns underneath them.",
     approach:
-      "Employees submit feedback by text or voice. AI clusters and synthesizes it into structured issue cards with severity and themes, shown on a leadership dashboard — with a keyword fallback when no API key is configured.",
+      "Employees submit feedback by text or voice. AI clusters and synthesizes it into structured issue cards with severity and themes, shown on a leadership dashboard, with a keyword fallback when no API key is configured.",
     aiArchitecture:
       "GPT-4o-mini clusters and summarizes submissions into actionable issue cards; Deepgram transcribes voice feedback. A privacy-first design keeps every submission anonymous.",
     highlights: [
@@ -131,16 +131,16 @@ export const projects: Project[] = [
     name: "LeagueCoach",
     tagline: "A real-time AI coach that watches your game and talks you through it.",
     blurb:
-      "Pulls live match data, reads the minimap with computer vision, sends the fused game state to Claude for strategy, and delivers advice as synthesized voice — in real time.",
+      "Pulls live match data, reads the minimap with computer vision, sends the fused game state to Claude for strategy, and delivers advice as synthesized voice, in real time.",
     categories: ["AI"],
     caps: ["Claude", "Vision", "Voice", "Realtime"],
     stack: ["Python", "OpenCV", "edge-tts", "Riot Live Client API", "asyncio"],
     aiStack: ["Claude Sonnet 4.6", "OpenCV vision"],
     accent: "#8b5cf6",
     problem:
-      "Improving at a fast real-time game needs in-the-moment strategic guidance — something post-game VOD review can't give you.",
+      "Improving at a fast real-time game needs in-the-moment strategic guidance, something post-game VOD review can't give you.",
     approach:
-      "Fuse three live signals — Riot's API, the minimap via computer vision, and game state — send them to Claude for strategy, and speak the advice back to the player while they play.",
+      "Fuse three live signals (Riot's API, the minimap via computer vision, and game state), send them to Claude for strategy, and speak the advice back to the player while they play.",
     aiArchitecture:
       "An async pipeline fuses Riot Live Client API data with OpenCV minimap template-matching. Claude Sonnet 4.6 turns the combined state into strategic advice, and edge-tts converts it to spoken audio in real time.",
     highlights: [
@@ -191,7 +191,7 @@ export const projects: Project[] = [
     problem:
       "Streamers sit on hours of clips but struggle to turn them into a steady stream of short-form content ideas.",
     approach:
-      "Point it at clips; Whisper transcribes the audio, GPT-4 analyzes the transcript, and the app returns content ideas — served from a Dockerized Flask backend.",
+      "Point it at clips; Whisper transcribes the audio, GPT-4 analyzes the transcript, and the app returns content ideas, served from a Dockerized Flask backend.",
     aiArchitecture:
       "OpenAI Whisper handles speech-to-text; GPT-4 generates content ideas from the transcript. Packaged with Docker + Gunicorn for deployment.",
     highlights: [
@@ -218,7 +218,7 @@ export const projects: Project[] = [
     approach:
       "Parse the game's quest data into a graph, lay it out as a readable DAG, add spoiler-aware fog-of-war, and generate concise recaps so you can follow the story across zones.",
     aiArchitecture:
-      "A build-time pipeline parses Questie Lua data into JSON, then Claude Haiku generates per-quest and questline recaps in bulk — a deliberately cost-effective model choice for thousands of entries — cached locally.",
+      "A build-time pipeline parses Questie Lua data into JSON, then Claude Haiku generates per-quest and questline recaps in bulk (a deliberately cost-effective model choice for thousands of entries), cached locally.",
     highlights: [
       "10,000+ quests across 119 zones (Classic + TBC)",
       "React Flow + Dagre directed-acyclic-graph layout",
