@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "Built for lifelong accumulation, not a one-year gift book",
       "Zero-API-key sample mode so anyone can try it instantly",
     ],
-    links: [],
+    links: [{ label: "Live site", href: "https://kinaroo.app" }],
   },
   {
     slug: "process-oracle",
